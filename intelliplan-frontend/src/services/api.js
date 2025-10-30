@@ -26,10 +26,9 @@ export const apiService = {
   getCourses: () => apiClient.get('/courses'),
   
   // Scheduling Endpoints
-  generateTimetables: (courseIds, optimize = false, slotPreferences = {}) => 
+  generateTimetables: (courseIds, slotPreferences = {}) => 
     apiClient.post('/generate', {
       course_codes: courseIds,
-      optimize,
       slot_preferences: slotPreferences,
     }),
   

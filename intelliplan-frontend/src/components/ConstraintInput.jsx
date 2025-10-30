@@ -6,18 +6,26 @@ import apiService from '../services/api';
  * NLPConstraintInput Component
  * Compact natural language constraint input optimized for side panel
  */
-export default function NLPConstraintInput({ timetables, onFilterApplied, onError }) {
+export default function NLPConstraintInput({ timetables, onFilterApplied, onError, appliedConstraints: parentConstraints = [] }) {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [appliedConstraints, setAppliedConstraints] = useState([]);
   const [originalTimetables, setOriginalTimetables] = useState(null);
 
-  // Store original timetables when they change
+  // Store original timetables only on first load
   React.useEffect(() => {
-    if (timetables && timetables.length > 0) {
+    if (timetables && timetables.length > 0 && !originalTimetables) {
       setOriginalTimetables(timetables);
     }
-  }, [timetables]);
+  }, []);
+
+  // When parent clears constraints (parentConstraints becomes empty), update our original
+  React.useEffect(() => {
+    if (parentConstraints.length === 0 && timetables && timetables.length > 0) {
+      setOriginalTimetables(timetables);
+      setAppliedConstraints([]);
+    }
+  }, [parentConstraints]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

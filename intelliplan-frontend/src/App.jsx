@@ -16,7 +16,6 @@ function App() {
   const [showExportModal, setShowExportModal] = useState(false);
   const [showCourseModal, setShowCourseModal] = useState(false);
   const [systemStats, setSystemStats] = useState(null);
-  const [optimize, setOptimize] = useState(false);
   const [appliedConstraints, setAppliedConstraints] = useState([]);
 
   // Load system info on mount
@@ -43,7 +42,7 @@ function App() {
       setError('');
       setLoading(true);
       setAppliedConstraints([]);
-      const response = await apiService.generateTimetables(selectedCourses, optimize, selectedSlots);
+      const response = await apiService.generateTimetables(selectedCourses, selectedSlots);
       
       const generated = response.data.timetables || [];
       if (generated.length === 0) {
@@ -60,7 +59,8 @@ function App() {
   };
 
   const handleFilterApplied = (filtered, constraints) => {
-    if (filtered.length === 0) {
+    if (filtered.length === 0 && constraints.length > 0) {
+      // Only show error if filters were applied but no results found
       setError('No timetables match the applied constraint');
     } else {
       setTimetables(filtered);
@@ -118,17 +118,6 @@ function App() {
             📚 Select Courses ({selectedCourses.length})
           </button>
         </div>
-
-        {/* Center: Optimize Option */}
-        <label className="flex items-center gap-2 cursor-pointer p-2 hover:bg-gray-50 rounded transition">
-          <input
-            type="checkbox"
-            checked={optimize}
-            onChange={(e) => setOptimize(e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
-          />
-          <span className="text-sm font-semibold text-gray-900">Optimize Results</span>
-        </label>
 
         {/* Right: Generate & Export Buttons */}
         <div className="flex items-center gap-3">
@@ -212,6 +201,7 @@ function App() {
                   timetables={timetables}
                   onFilterApplied={handleFilterApplied}
                   onError={setError}
+                  appliedConstraints={appliedConstraints}
                 />
                 
                 {/* Applied Constraints Display */}
