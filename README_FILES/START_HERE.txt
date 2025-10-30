@@ -195,3 +195,10 @@ cd /Users/RohitJain/Documents/ENROLLMENT/intelliplan-backend && source venv/bin/
 
 
 cd /Users/RohitJain/Documents/ENROLLMENT/intelliplan-frontend && npm start 
+
+
+
+git config --global user.name "ROHITJAIND" && git config --global user.email "rohitjain.sec@gmail.com"
+
+
+git config --global user.name "ROHITJAIND-6s" && git config --global user.email "rohit.jain@the6sconsulting.com"
