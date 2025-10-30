@@ -1,0 +1,73 @@
+# 🔧 QUICK FIX - RESTART BACKEND & REFRESH FRONTEND
+
+## The Problem
+Slots showing as "No slots available" when clicked
+
+## The Solution
+Backend API field names didn't match frontend expectations
+
+## The Fix (Already Applied!)
+✅ Updated `/courses` endpoint in `main.py` to return:
+- `slots` (instead of `slot_options`)
+- `time_blocks` (instead of `timings`)
+- `start_time`/`end_time` (instead of `start`/`end`)
+- Added `faculty_name` field
+
+---
+
+## 🚀 What You Need to Do
+
+### Step 1: Restart Backend Server
+
+**In the Python terminal, press:**
+```
+Ctrl+C
+```
+
+**Then run:**
+```bash
+cd /Users/RohitJain/Documents/ENROLLMENT/intelliplan-backend
+source venv/bin/activate
+python -m uvicorn app.main:app --reload
+```
+
+### Step 2: Refresh Browser
+
+**In browser:**
+```
+Mac: Cmd+Shift+Delete (clear cache)
+Then: Cmd+R (refresh)
+```
+
+### Step 3: Test
+
+1. Click "📚 Select Courses"
+2. Click "Slot ▼" button
+3. **Should see slots with schedules!** ✅
+
+---
+
+## ✨ Result
+
+**Before**: Click slot button → "No slots available" ❌
+
+**After**: Click slot button → See all slots with times ✅
+
+---
+
+## 📝 What Changed
+
+**File**: `intelliplan-backend/app/main.py`
+
+**Endpoint**: `GET /courses`
+
+**Changes**:
+- `"slot_options"` → `"slots"`
+- `"timings"` → `"time_blocks"`
+- `"start"` → `"start_time"`
+- `"end"` → `"end_time"`
+- Added `"faculty_name"`
+
+---
+
+**That's it!** Just restart backend and refresh browser! 🎉

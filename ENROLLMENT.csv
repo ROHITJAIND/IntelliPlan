@@ -1,0 +1,21 @@
+COURSE_CODE,COURSE_NAME,FACULTY_NAME,SLOT_NUMBER,TIMINGS,CREDITS
+19ME533,3D Printing Processes,MUTHUKUMAR V,4C1-1,"Tuesday: 08:00 - 09:00, Tuesday: 09:00 - 10:00, Wednesday: 15:00 - 16:00, Wednesday: 16:00 - 17:00",4
+19AI540C,Advanced Java with Android App Development,Surya S,6R1-1,"Saturday: 08:00 - 09:00, Saturday: 09:00 - 10:00, Tuesday: 08:00 - 09:00, Tuesday: 09:00 - 10:00, Wednesday: 10:00 - 11:00, Wednesday: 11:00 - 12:00",6
+19CE521,Air Pollution Engineering,Padma S,3J1-1,"Monday: 10:00 - 11:00, Monday: 11:00 - 12:00, Wednesday: 11:00 - 12:00",3
+19AI404,Analysis of Algorithms,Sasikala K,4W2-2,"Monday: 08:00 - 09:00, Monday: 09:00 - 10:00, Saturday: 13:00 - 14:00, Saturday: 14:00 - 15:00",3
+19AI404,Analysis of Algorithms,Maha Lakshmi,4W2-1,"Monday: 08:00 - 09:00, Monday: 09:00 - 10:00, Saturday: 13:00 - 14:00, Saturday: 14:00 - 15:00",3
+19AI404,Analysis of Algorithms,Selvanayaki S S,4R1-1,"Monday: 15:00 - 16:00, Monday: 16:00 - 17:00, Wednesday: 08:00 - 09:00, Wednesday: 09:00 - 10:00",3
+19AI404,Analysis of Algorithms,Selvanayaki S S,4X2-1,"Tuesday: 08:00 - 09:00, Tuesday: 09:00 - 10:00, Wednesday: 13:00 - 14:00, Wednesday: 14:00 - 15:00",3
+19AI409,Applied Artificial Intelligence,Lavanya G,4K1-1,"Monday: 13:00 - 14:00, Monday: 14:00 - 15:00, Saturday: 10:00 - 11:00, Saturday: 11:00 - 12:00",3
+19AI409,Applied Artificial Intelligence,Saravanan N,4K1-2,"Monday: 13:00 - 14:00, Monday: 14:00 - 15:00, Saturday: 10:00 - 11:00, Saturday: 11:00 - 12:00",3
+19AI409,Applied Artificial Intelligence,Saravanan N,4J3-2,"Tuesday: 08:00 - 09:00, Tuesday: 09:00 - 10:00, Wednesday: 08:00 - 09:00, Wednesday: 09:00 - 10:00",3
+19AI409,Applied Artificial Intelligence,Lavanya G,4J3-1,"Tuesday: 08:00 - 09:00, Tuesday: 09:00 - 10:00, Wednesday: 08:00 - 09:00, Wednesday: 09:00 - 10:00",3
+19ME511,Automobile Engineering,Renjith Krishnan,4A3-1,"Tuesday: 10:00 - 11:00, Tuesday: 11:00 - 12:00, Wednesday: 10:00 - 11:00, Wednesday: 11:00 - 12:00",3
+19EE305,"Basic Electrical, Electronics and Measurement Engineering",JOHN DE BRITTO C,4W2-1,"Monday: 08:00 - 09:00, Monday: 09:00 - 10:00, Saturday: 13:00 - 14:00, Saturday: 14:00 - 15:00",3
+19EE305,"Basic Electrical, Electronics and Measurement Engineering",JOHN DE BRITTO C,4Z3-2,"Monday: 13:00 - 14:00, Monday: 14:00 - 15:00, Wednesday: 10:00 - 11:00, Wednesday: 11:00 - 12:00",3
+19EE305,"Basic Electrical, Electronics and Measurement Engineering",Kanchana K,4N1-2,"Monday: 10:00 - 11:00, Monday: 11:00 - 12:00, Thursday: 13:00 - 14:00, Thursday: 14:00 - 15:00",3
+19EE305,"Basic Electrical, Electronics and Measurement Engineering",R Vinifa,4N1-1,"Monday: 10:00 - 11:00, Monday: 11:00 - 12:00, Thursday: 13:00 - 14:00, Thursday: 14:00 - 15:00",3
+19EE305,"Basic Electrical, Electronics and Measurement Engineering",Kanchana K,4Z3-1,"Monday: 13:00 - 14:00, Monday: 14:00 - 15:00, Wednesday: 10:00 - 11:00, Wednesday: 11:00 - 12:00",3
+19EE305,"Basic Electrical, Electronics and Measurement Engineering",SAVITHA V,4I4-2,"Monday: 13:00 - 14:00, Monday: 14:00 - 15:00, Wednesday: 08:00 - 09:00, Wednesday: 09:00 - 10:00",3
+19EE305,"Basic Electrical, Electronics and Measurement Engineering",R Vinifa,4I4-1,"Monday: 13:00 - 14:00, Monday: 14:00 - 15:00, Wednesday: 08:00 - 09:00, Wednesday: 09:00 - 10:00",3
+19EE305,"Basic Electrical, Electronics and Measurement Engineering",SAVITHA V,4L3-2,"Friday: 08:00 - 09:00, Friday: 09:00 - 10:00, Tuesday: 08:00 - 09:00, Tuesday: 09:00 - 10:00",3

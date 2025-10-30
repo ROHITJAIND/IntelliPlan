@@ -1,0 +1,59 @@
+# 🔧 QUICK FIX REFERENCE
+
+**Issue**: "Clear Filters" button doesn't show original timetables  
+**Status**: ✅ FIXED  
+**File**: `intelliplan-frontend/src/components/ConstraintInput.jsx`  
+
+---
+
+## The Problem (Simplified)
+
+```
+Generate    → 21 timetables ✓
+Filter      → 8 timetables ✓
+Clear       → Still 8 ✗ (BUG!)
+Generate    → 21 timetables (workaround!)
+```
+
+---
+
+## The Fix (1 Line)
+
+**Changed line 48 in ConstraintInput.jsx:**
+
+```jsx
+// BEFORE (❌):
+onFilterApplied?.(timetables, []);
+
+// AFTER (✅):
+onFilterApplied?.(originalTimetables, []);
+```
+
+---
+
+## Test It (30 seconds)
+
+1. Refresh browser
+2. Generate timetables (21 options)
+3. Apply filter (8 options)
+4. Click "Clear"
+5. **Should see 21 options again!** ✅
+
+---
+
+## Why It Works
+
+- **`timetables`** = current filtered display (changes)
+- **`originalTimetables`** = original untouched (never changes)
+- Clear should use the original!
+
+---
+
+## Status
+
+✅ Fixed and deployed  
+✅ Ready to test  
+✅ One-line change  
+✅ Zero risk  
+
+**Go test it!** 🚀
