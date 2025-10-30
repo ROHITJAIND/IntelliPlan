@@ -12,7 +12,7 @@ import os
 from pathlib import Path
 
 from app.modules.data_processor import process_enrollment_data, CSVDataImporter
-from app.modules.scheduler import BacktrackingScheduler, ScheduleOptimizer
+from app.modules.scheduler import BacktrackingScheduler
 from app.modules.nlp_filter import IntentDetector, ConstraintFilter
 
 
@@ -46,7 +46,6 @@ class CourseListResponse(BaseModel):
 
 class GenerateRequest(BaseModel):
     course_codes: List[str]
-    optimize: bool = False
     slot_preferences: Dict[str, List[str]] = {}  # courseCode -> [slotNumbers]
 
 
@@ -230,13 +229,6 @@ def generate_timetables(request: GenerateRequest):
         # Generate all valid timetables
         schedules = scheduler.generate_timetables(request.course_codes)
 
-        # Optimize if requested
-        if request.optimize and schedules:
-            schedules = ScheduleOptimizer.rank_schedules(
-                schedules,
-                criteria={"prefer_morning": True}
-            )
-
         # Convert to response format
         timetables = [schedule.to_dict() for schedule in schedules]
 
@@ -244,7 +236,6 @@ def generate_timetables(request: GenerateRequest):
             "status": "success",
             "count": len(timetables),
             "timetables": timetables,
-            "optimized": request.optimize,
         }
 
     except ValueError as e:
